@@ -21,6 +21,10 @@ public class MarkdownParse {
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
             String sub = markdown.substring(openParen + 1, closeParen);
+            int currentIndex2 = openParen + 1;
+            if(sub.contains("(")){
+                sub = markdown.substring(sub.lastIndexOf("(", currentIndex2)+openParen+2, closeParen);
+            }
             if(exclamation == -1){
                 toReturn.add(sub);
             }
