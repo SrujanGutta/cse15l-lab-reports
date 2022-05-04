@@ -12,11 +12,20 @@ public class MarkdownParse {
         // find the next [, then find the ], then find the (, then read link upto next )
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
+            int exclamation = markdown.indexOf("!",currentIndex);
             int openBracket = markdown.indexOf("[", currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
-            toReturn.add(markdown.substring(openParen + 1, closeParen));
+            String sub = markdown.substring(openParen + 1, closeParen);
+            if(exclamation == -1){
+                toReturn.add(sub);
+            }
+            else{
+                if(exclamation != (openBracket-1)){
+                    toReturn.add(sub);
+                }
+            }
             currentIndex = closeParen + 1;
         }
 
