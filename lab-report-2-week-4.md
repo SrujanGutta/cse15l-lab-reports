@@ -3,7 +3,7 @@
 
 ### Code Change 1
 ![bug1](bug_not_error.PNG)  
-- The error is that if there is an image it will instead of putting the link it will put the image.  
+- The error is that if there is an image it will instead of putting the link it will put the image [this](test-file-2.md) is the error.  
 
 ![bug1-fix](bug_not_error-fix.PNG)  
 
@@ -13,7 +13,7 @@
 
 ### Code Change 2
 ![bug2](error_after_last.PNG)  
-- The bug is if there is non brackets after the last parenthesis it will cause errors in the code and result in a compilation error.  
+- The bug is if there is non brackets after the last parenthesis it will cause errors in the code and result in a compilation error [this](test-file-3.md) is the error.  
 
 ![bug2-fix](error_after_last-fix.PNG)  
 
@@ -23,7 +23,7 @@
 
 ### Code Change 3
 ![bug2](Error_before.PNG)  
-- The bug results in extra parenthesis in the links instead of just the links  
+- The bug results in extra parenthesis in the links instead of just the links [this](test-file-4.md) is the error.  
 
 ![bug2-fix](error_before-fix.PNG)  
 
